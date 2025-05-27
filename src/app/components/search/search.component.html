@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <h2 class="text-light mb-4">Recherche de films ou séries</h2>
+
+  <div class="input-group mb-4">
+    <input type="text" class="form-control" placeholder="Entrez un titre" [(ngModel)]="searchQuery">
+    <button class="btn btn-danger" (click)="rechercher()">Rechercher</button>
+  </div>
+
+  <div *ngIf="resultats.length === 0 && aRecherche" class="text-light">Aucun résultat trouvé.</div>
+
+  <div class="row">
+    <div class="col-md-4 mb-4" *ngFor="let media of resultats">
+      <div class="card bg-dark text-light h-100">
+        <img [src]="media.affiche_url" class="card-img-top" alt="{{ media.titre }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ media.titre }}</h5>
+          <p class="card-text"><strong>Année :</strong> {{ media.annee_sortie }}</p>
+          <p class="card-text"><strong>Type :</strong> {{ media.type }}</p>
+          <p class="card-text"><strong>Note :</strong> {{ media.note }}</p>
+          <p class="card-text"><strong>Résumé :</strong> {{ media.resume }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
