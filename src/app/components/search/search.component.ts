@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Media } from '../../models/media.model';
 import { TmdbService } from '../../services/tmdb.service';
+import { MediaCardComponent } from "../media-card/media-card.component";
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MediaCardComponent],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
