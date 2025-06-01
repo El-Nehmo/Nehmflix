@@ -10,16 +10,7 @@
 
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let media of resultats">
-      <div class="card bg-dark text-light h-100">
-        <img [src]="media.affiche_url" class="card-img-top" alt="{{ media.titre }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ media.titre }}</h5>
-          <p class="card-text"><strong>Année :</strong> {{ media.annee_sortie }}</p>
-          <p class="card-text"><strong>Type :</strong> {{ media.type }}</p>
-          <p class="card-text"><strong>Note :</strong> {{ media.note }}</p>
-          <p class="card-text"><strong>Résumé :</strong> {{ media.resume }}</p>
-        </div>
-      </div>
+      <app-media-card [media]="media"></app-media-card>
     </div>
   </div>
 </div>
