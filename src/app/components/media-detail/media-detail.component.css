@@ -1,0 +1,40 @@
+.container {
+  margin-top: 40px;
+  color: #fff;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  margin-top: 40px;
+  color: #fff; 
+}
+
+.col-md-8 {
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2, p, strong {
+  color: #fff;
+}
+
