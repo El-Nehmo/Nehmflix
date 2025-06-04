@@ -18,4 +18,13 @@ export class TmdbService {
     const url = `${this.apiUrl}/search/multi?api_key=${this.apiKey}&language=fr-FR&query=${encodeURIComponent(query)}`;
     return this.http.get(url);
   }
+
+  
+  // Retourne les détails d’un film ou d’une série
+  getDetails(id: string, type: 'movie' | 'tv'): Observable<any> {
+    const url = `${this.apiUrl}/${type}/${id}?api_key=${this.apiKey}&language=fr-FR`;
+    return this.http.get(url);
+  }
+
+
 }

@@ -13,6 +13,7 @@ export class MediaCardComponent {
   constructor(private router: Router) {}
 
   voirDetails() {
-    this.router.navigate(['/media', this.media.id_tmdb]);
-  }
+  this.router.navigate(['/media', this.media.id_tmdb, this.media.type === 'film' ? 'movie' : 'tv']);
+}
+
 }

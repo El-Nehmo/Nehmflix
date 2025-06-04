@@ -7,6 +7,6 @@ export const routes: Routes = [
 
     { path: '', component: HomeComponent},
     { path: 'search', component: SearchComponent},
-    { path: 'media/:id', component: MediaDetailComponent },
+    { path: 'media/:id/:type', component: MediaDetailComponent },
 
 ];
