@@ -1,20 +1,19 @@
-<div class="container py-5 text-light" *ngIf="media">
+<div class="container text-light mt-4" *ngIf="media">
   <div class="row">
-    <div class="col-md-4 mb-4">
-      <img [src]="media.affiche_url" alt="{{ media.titre }}" class="img-fluid rounded shadow">
+    <div class="col-md-4">
+      <img [src]="media.affiche_url" class="img-fluid rounded" alt="{{ media.titre }}">
     </div>
     <div class="col-md-8">
-      <h2 class="mb-3">{{ media.titre }}</h2>
+      <h2>{{ media.titre }}</h2>
       <p><strong>Type :</strong> {{ media.type }}</p>
       <p><strong>Année de sortie :</strong> {{ media.annee_sortie }}</p>
       <p><strong>Note :</strong> {{ media.note }}</p>
-      <p><strong>Résumé :</strong><br> {{ media.resume }}</p>
+      <p><strong>Résumé :</strong> {{ media.resume }}</p>
     </div>
   </div>
 </div>
 
-<div class="container py-5 text-light" *ngIf="!media">
-  <div class="text-center">
-    <p>Média introuvable ou en cours de chargement...</p>
-  </div>
+<div *ngIf="!media" class="text-light mt-4">
+  <p>Média introuvable ou en cours de chargement...</p>
 </div>
+

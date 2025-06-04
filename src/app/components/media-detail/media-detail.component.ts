@@ -26,6 +26,7 @@ export class MediaDetailComponent implements OnInit{
       if (id && type) {
         this.tmdbService.getDetails(id, type as 'movie' | 'tv').subscribe((data: Media ) => {
           this.media = data;
+          console.log("Média récupére", this.media);
           
         });
       }
