@@ -6,5 +6,6 @@ export interface Media {
   note: number;
   affiche_url: string;
   resume: string;
+  genres?: { id: number; name: string }[];
   dernier_update?: string;
 }
