@@ -1,18 +1,37 @@
 <div class="container text-light mt-4" *ngIf="media">
   <div class="row">
+    <!-- Affiche du média -->
     <div class="col-md-4">
       <img [src]="media.affiche_url" class="img-fluid rounded" alt="{{ media.titre }}">
     </div>
+
+    <!-- Détails -->
     <div class="col-md-8">
       <h2>{{ media.titre }}</h2>
       <p><strong>Type :</strong> {{ media.type }}</p>
       <p><strong>Année de sortie :</strong> {{ media.annee_sortie }}</p>
       <p><strong>Note :</strong> {{ media.note }}</p>
       <p><strong>Résumé :</strong> {{ media.resume }}</p>
+
+      <!-- Genres -->
+      <div *ngIf="genres.length">
+        <p><strong>Genres :</strong> {{ genres.join(', ') }}</p>
+      </div>
+
+      <!-- Réalisateurs -->
+      <div *ngIf="directors.length">
+        <p><strong>Réalisateur(s) :</strong> {{ directors.join(', ') }}</p>
+      </div>
+
+      <!-- Acteurs principaux -->
+      <div *ngIf="actors.length">
+        <p><strong>Acteurs principaux :</strong> {{ actors.join(', ') }}</p>
+      </div>
     </div>
   </div>
 </div>
 
+<!-- En cas de média non trouvé -->
 <div *ngIf="!media" class="text-light mt-4">
   <p>Média introuvable ou en cours de chargement...</p>
 </div>
