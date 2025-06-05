@@ -37,6 +37,12 @@ export class TmdbService {
     }))
   );
 }
+  // Méthode pour récupérer les crédits (acteurs, réalisateurs, etc.)
+  getCredits(id: string, type: 'movie' | 'tv'): Observable<any> {
+    const url = `${this.apiUrl}/${type}/${id}/credits?api_key=${this.apiKey}&language=fr-FR`;
+    return this.http.get(url);
+}
+
 
 
 }
