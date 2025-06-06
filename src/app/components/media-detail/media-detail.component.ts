@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { TmdbService } from '../../services/tmdb.service';
 import { Media } from '../../models/media.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-media-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './media-detail.component.html',
   styleUrl: './media-detail.component.css'
 })
