@@ -29,7 +29,10 @@ export class MediaDetailComponent implements OnInit {
     if (id && type) {
       this.tmdbService.getDetails(id, type as 'movie' | 'tv').subscribe((data: Media) => {
         this.media = data;
-        this.genres = data.genres?.map((g: any) => g.name) || [];
+        console.log("affichage du média pour deboggage", data)
+        //this.genres = data.genres?.map((g: any) => g.name) || [];
+        this.genres = Array.isArray(data.genres) ? data.genres.map((g: any) => g.name) : [];
+
       });
 
       this.tmdbService.getCredits(id, type as 'movie' | 'tv').subscribe((credits: any) => {

@@ -33,6 +33,7 @@ export class TmdbService {
       annee_sortie: (data.release_date || data.first_air_date || '').slice(0, 4),
       note: data.vote_average,
       affiche_url: `https://image.tmdb.org/t/p/w500${data.poster_path}`,
+      genres: data.genres,
       resume: data.overview
     }))
   );
