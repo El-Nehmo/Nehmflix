@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-media-detail',
+  standalone: true,
   imports: [CommonModule, RouterModule],
   templateUrl: './media-detail.component.html',
   styleUrl: './media-detail.component.css'
