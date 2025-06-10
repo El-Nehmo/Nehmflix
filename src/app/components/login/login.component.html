@@ -1,17 +1,36 @@
-<div class="container mt-5 text-light">
-  <h2 class="mb-4">Connexion à NehmFlix</h2>
+<div class="container mt-5" style="max-width: 400px;">
+  <h2 class="mb-4 text-center text-light">Connexion</h2>
 
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-      <label for="email" class="form-label">Adresse email</label>
-      <input type="email" id="email" class="form-control" placeholder="ex: user@email.com" />
+      <label for="email" class="form-label text-light">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        formControlName="email"
+        [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+      />
+      <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="invalid-feedback">
+        Email invalide
+      </div>
     </div>
 
     <div class="mb-3">
-      <label for="password" class="form-label">Mot de passe</label>
-      <input type="password" id="password" class="form-control" placeholder="Votre mot de passe" />
+      <label for="password" class="form-label text-light">Mot de passe</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        formControlName="password"
+        [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+      />
+      <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="invalid-feedback">
+        Mot de passe requis
+      </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Se connecter</button>
+    <button type="submit" class="btn btn-primary w-100">Se connecter</button>
   </form>
 </div>
+
