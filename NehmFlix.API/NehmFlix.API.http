@@ -1,0 +1,6 @@
+@NehmFlix.API_HostAddress = http://localhost:5074
+
+GET {{NehmFlix.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
