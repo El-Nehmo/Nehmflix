@@ -586,6 +586,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Mysql.Data": "9.3.0",
           "NehmFlix.Domain": "1.0.0"
         },
         "compile": {
