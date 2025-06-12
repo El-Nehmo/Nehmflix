@@ -1,6 +1,7 @@
 using MySql.Data.MySqlClient;
 using NehmFlix.Domain.Entities;
 using BCrypt.Net;
+using NehmFlix.Application.Services;
 
 /*
  Service responsable de la gestion des utilisateurs :
@@ -29,25 +30,40 @@ public class UserService
      - Empêche le stockage en clair
      - Ajoute nom, email et mot de passe haché
     */
+    
+    /*
+    Gère l'enregistrement d'un nouvel utilisateur.
+    - Vérifie que les champs ne sont pas vides (nom, email, mot de passe)
+    - Le mot de passe est hashé avec BCrypt avant stockage
+    - Empêche le stockage en clair
+    - Ajoute nom, email et mot de passe hashé dans la base MySQL
+    */
     public void Register(User user)
     {
+        // Vérifie les données utilisateur avant de continuer
+        if (!UserValidator.EstValide(user))
+        {
+            throw new ArgumentException("Les données utilisateur sont invalides.");
+        }
+
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
         var query = @"INSERT INTO users (nom, email, mot_de_passe)
-                      VALUES (@Nom, @Email, @MotDePasse);";
+                  VALUES (@Nom, @Email, @MotDePasse);";
 
         using var cmd = new MySqlCommand(query, connection);
 
+        // Hash du mot de passe avec BCrypt
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.MotDePasse);
+
         cmd.Parameters.AddWithValue("@Nom", user.Nom);
         cmd.Parameters.AddWithValue("@Email", user.Email);
-
-        // On hash le mot de passe avec BCrypt
-        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.MotDePasse);
         cmd.Parameters.AddWithValue("@MotDePasse", hashedPassword);
 
         cmd.ExecuteNonQuery();
     }
+
 
     /*
      Vérifie les identifiants pour une tentative de connexion :
