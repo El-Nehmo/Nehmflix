@@ -2174,6 +2174,7 @@
     "net8.0": [
       "Microsoft.AspNetCore.OpenApi >= 8.0.15",
       "NehmFlix.Application >= 1.0.0",
+      "NehmFlix.Domain >= 1.0.0",
       "NehmFlix.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
@@ -2205,6 +2206,9 @@
           "projectReferences": {
             "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj": {
               "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj"
+            },
+            "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj": {
+              "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj"
             },
             "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj": {
               "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj"

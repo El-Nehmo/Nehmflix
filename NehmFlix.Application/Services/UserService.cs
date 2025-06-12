@@ -9,7 +9,8 @@ using NehmFlix.Application.Services;
  - Connexion avec vérification du hash
  Ce service se connecte directement à MySQL via une chaîne de connexion.
 */
-namespace NehmFlix.Infrastructure.Services;
+namespace NehmFlix.Application.Services;
+
 
 public class UserService
 {
