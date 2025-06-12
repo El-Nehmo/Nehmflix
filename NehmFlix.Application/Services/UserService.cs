@@ -1,19 +1,22 @@
 using MySql.Data.MySqlClient;
 using NehmFlix.Domain.Entities;
-
-namespace NehmFlix.Infrastructure.Services;
+using BCrypt.Net;
 
 /*
- Service de gestion des utilisateurs.
- Fournit des méthodes pour s'inscrire et se connecter.
+ Service responsable de la gestion des utilisateurs :
+ - Enregistrement avec hachage sécurisé du mot de passe
+ - Connexion avec vérification du hash
+ Ce service se connecte directement à MySQL via une chaîne de connexion.
 */
+namespace NehmFlix.Infrastructure.Services;
+
 public class UserService
 {
     private readonly string _connectionString;
 
     /*
-     Constructeur qui reçoit la chaîne de connexion
-     à la base de données MySQL.
+     Initialise le service avec la chaîne de connexion MySQL
+     fournie au moment de l’instanciation.
     */
     public UserService(string connectionString)
     {
@@ -21,8 +24,10 @@ public class UserService
     }
 
     /*
-     Enregistre un nouvel utilisateur dans la base.
-     On insère son nom, email et mot de passe.
+     Inscrit un nouvel utilisateur dans la base de données :
+     - Le mot de passe est haché avec BCrypt avant stockage
+     - Empêche le stockage en clair
+     - Ajoute nom, email et mot de passe haché
     */
     public void Register(User user)
     {
@@ -33,40 +38,50 @@ public class UserService
                       VALUES (@Nom, @Email, @MotDePasse);";
 
         using var cmd = new MySqlCommand(query, connection);
+
         cmd.Parameters.AddWithValue("@Nom", user.Nom);
         cmd.Parameters.AddWithValue("@Email", user.Email);
-        cmd.Parameters.AddWithValue("@MotDePasse", user.MotDePasse);
+
+        // On hash le mot de passe avec BCrypt
+        var hashedPassword = BCrypt.Net.BCrypt.HashPassword(user.MotDePasse);
+        cmd.Parameters.AddWithValue("@MotDePasse", hashedPassword);
 
         cmd.ExecuteNonQuery();
     }
 
     /*
-     Vérifie les identifiants de connexion (email + mot de passe).
-     Si c’est correct, retourne l’utilisateur trouvé.
-     Sinon, retourne null.
+     Vérifie les identifiants pour une tentative de connexion :
+     - Récupère l’utilisateur via son email
+     - Compare le mot de passe fourni avec le hash enregistré
+     - Si ok → retourne l’utilisateur ; sinon → null
     */
     public User? Login(string email, string motDePasse)
     {
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
 
-        var query = @"SELECT * FROM users WHERE email = @Email AND mot_de_passe = @MotDePasse;";
+        var query = @"SELECT * FROM users WHERE email = @Email;";
 
         using var cmd = new MySqlCommand(query, connection);
         cmd.Parameters.AddWithValue("@Email", email);
-        cmd.Parameters.AddWithValue("@MotDePasse", motDePasse);
 
         using var reader = cmd.ExecuteReader();
         if (reader.Read())
         {
-            return new User
+            var hashedPassword = reader["mot_de_passe"].ToString()!;
+            var isPasswordValid = BCrypt.Net.BCrypt.Verify(motDePasse, hashedPassword);
+
+            if (isPasswordValid)
             {
-                Id = Convert.ToInt32(reader["id"]),
-                Nom = reader["nom"].ToString()!,
-                Email = reader["email"].ToString()!,
-                MotDePasse = reader["mot_de_passe"].ToString()!,
-                DateInscription = Convert.ToDateTime(reader["date_inscription"])
-            };
+                return new User
+                {
+                    Id = Convert.ToInt32(reader["id"]),
+                    Nom = reader["nom"].ToString()!,
+                    Email = reader["email"].ToString()!,
+                    MotDePasse = hashedPassword,
+                    DateInscription = Convert.ToDateTime(reader["date_inscription"])
+                };
+            }
         }
 
         return null;

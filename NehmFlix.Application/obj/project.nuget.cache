@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "fjbVSTzr2FA=",
+  "dgSpecHash": "YzrJw1XITzM=",
   "success": true,
   "projectFilePath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj",
   "expectedPackageFiles": [
+    "/Users/nehemie/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/nehemie/.nuget/packages/bouncycastle.cryptography/2.5.1/bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "/Users/nehemie/.nuget/packages/google.protobuf/3.30.0/google.protobuf.3.30.0.nupkg.sha512",
     "/Users/nehemie/.nuget/packages/k4os.compression.lz4/1.3.8/k4os.compression.lz4.1.3.8.nupkg.sha512",
