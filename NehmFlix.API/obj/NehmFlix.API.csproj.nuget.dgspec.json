@@ -25,7 +25,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj": {
+                "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj"
+              },
+              "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj": {
+                "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -67,6 +74,194 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj",
+        "projectName": "NehmFlix.Application",
+        "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/NehmFlix.Application.csproj",
+        "packagesPath": "/Users/nehemie/.nuget/packages/",
+        "outputPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nehemie/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj": {
+                "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj",
+        "projectName": "NehmFlix.Domain",
+        "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj",
+        "packagesPath": "/Users/nehemie/.nuget/packages/",
+        "outputPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nehemie/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.408/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj",
+        "projectName": "NehmFlix.Infrastructure",
+        "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/NehmFlix.Infrastructure.csproj",
+        "packagesPath": "/Users/nehemie/.nuget/packages/",
+        "outputPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nehemie/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj": {
+                "projectPath": "/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/NehmFlix.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

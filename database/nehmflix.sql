@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS nehmflixdb;
+USE nehmflixdb;
+
 CREATE TYPE media_type AS ENUM ('film', 'serie');
 
 CREATE TYPE liste_type AS ENUM ('regarde', 'a_regarder');
