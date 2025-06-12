@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NehmFlix.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aca1973f977ab90116d266e583744fe02e1fd1c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f0a812a256062402b8e894a374fa44815f722a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("NehmFlix.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NehmFlix.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

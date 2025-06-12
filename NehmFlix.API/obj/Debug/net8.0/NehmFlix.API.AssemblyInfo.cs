@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NehmFlix.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4834c6d52b251d66b9fa15c45434c93d2989dd8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af7a2bc560ce2ec375c768ccf8f03d2ab8277c78")]
 [assembly: System.Reflection.AssemblyProductAttribute("NehmFlix.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NehmFlix.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
