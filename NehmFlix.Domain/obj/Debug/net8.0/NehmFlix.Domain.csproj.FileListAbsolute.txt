@@ -1,0 +1,12 @@
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/bin/Debug/net8.0/NehmFlix.Domain.deps.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/bin/Debug/net8.0/NehmFlix.Domain.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/bin/Debug/net8.0/NehmFlix.Domain.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.AssemblyInfoInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.AssemblyInfo.cs
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.csproj.CoreCompileInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.sourcelink.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/refint/NehmFlix.Domain.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/NehmFlix.Domain.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Domain/obj/Debug/net8.0/ref/NehmFlix.Domain.dll

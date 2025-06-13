@@ -1,0 +1,16 @@
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/bin/Debug/net8.0/NehmFlix.Infrastructure.deps.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/bin/Debug/net8.0/NehmFlix.Infrastructure.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/bin/Debug/net8.0/NehmFlix.Infrastructure.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/bin/Debug/net8.0/NehmFlix.Domain.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/bin/Debug/net8.0/NehmFlix.Domain.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.csproj.AssemblyReference.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.AssemblyInfoInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.AssemblyInfo.cs
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.sourcelink.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.EAC5BA25.Up2Date
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/refint/NehmFlix.Infrastructure.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/NehmFlix.Infrastructure.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Infrastructure/obj/Debug/net8.0/ref/NehmFlix.Infrastructure.dll

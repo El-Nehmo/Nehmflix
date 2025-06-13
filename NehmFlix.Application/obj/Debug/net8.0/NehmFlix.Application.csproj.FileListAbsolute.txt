@@ -1,0 +1,16 @@
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/bin/Debug/net8.0/NehmFlix.Application.deps.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/bin/Debug/net8.0/NehmFlix.Application.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/bin/Debug/net8.0/NehmFlix.Application.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/bin/Debug/net8.0/NehmFlix.Domain.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/bin/Debug/net8.0/NehmFlix.Domain.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.csproj.AssemblyReference.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.AssemblyInfoInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.AssemblyInfo.cs
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.csproj.CoreCompileInputs.cache
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.sourcelink.json
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.F0779395.Up2Date
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/refint/NehmFlix.Application.dll
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/NehmFlix.Application.pdb
+/Users/nehemie/Documents/NehmFlix/NehmFlix.Application/obj/Debug/net8.0/ref/NehmFlix.Application.dll

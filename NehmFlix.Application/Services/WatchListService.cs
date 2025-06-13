@@ -9,7 +9,7 @@ namespace NehmFlix.Application.Services;
  Permet d'ajouter, supprimer et récupérer les médias d'un utilisateur.
  Utilise des requêtes SQL directes via MySql.Data.
 */
-public class WatchlistService
+public class WatchListService
 {
     private readonly string _connectionString;
 
@@ -17,7 +17,7 @@ public class WatchlistService
      Constructeur qui reçoit la chaîne de connexion MySQL.
      Nécessaire pour se connecter à la base.
     */
-    public WatchlistService(string connectionString)
+    public WatchListService(string connectionString)
     {
         _connectionString = connectionString;
     }

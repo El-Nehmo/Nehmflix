@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "IwlB2gWWTw+6cVXAY0Pv7y1PwRhqHzMOTAeQofyos5s=",
+  "Source": "NehmFlix.API",
+  "BasePath": "_content/NehmFlix.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
