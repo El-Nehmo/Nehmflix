@@ -1,59 +1,136 @@
-# NehmFlix
+# 🎬 NehmFlix
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+NehmFlix est une application web complète permettant de rechercher des films et séries via l’API TMDb, de créer un compte, et de gérer sa propre **watchlist**.  
+Elle est construite avec :
 
-## Development server
+- **Angular 19** pour le front-end  
+- **.NET 8 (C#)** pour le back-end  
+- **MySQL** pour la base de données  
+- **Bootstrap** pour le style  
+- **TMDb API** pour les données externes  
+- **BCrypt.Net** pour sécuriser les mots de passe
 
-To start a local development server, run:
+---
+
+## 📋 Prérequis
+
+### 🔧 Outils à installer (obligatoires)
+
+| Outil         | Pourquoi ?                            | Téléchargement                             |
+|---------------|----------------------------------------|--------------------------------------------|
+| **Node.js**   | Pour faire tourner Angular             | https://nodejs.org/en                      |
+| **Angular CLI** | Pour gérer et compiler le front-end  | `npm install -g @angular/cli`              |
+| **.NET SDK 8** | Pour exécuter l’API back-end en C#    | https://dotnet.microsoft.com/download      |
+| **MySQL**     | Pour stocker les utilisateurs et watchlist | https://www.mysql.com/fr/              |
+
+---
+
+## 🧪 Installation complète
+
+### 🔁 Étape 1 - Cloner le projet
+
+```bash
+git clone https://github.com/El-Nehmo/Nehmflix.git
+cd Nehmflix
+```
+
+---
+
+## 🔹 Front-End (Angular)
+
+### 📦 Installation des dépendances
+
+```bash
+npm install
+```
+
+### 🔑 Configuration de la clé TMDb
+
+Dans `src/environments/environment.ts`, ajoute ta clé TMDb : (au préalable créer un compte tmdb pour avoir la clé api)
+
+```ts
+export const environment = {
+  tmdbApikey: 'VOTRE_CLÉ_TMDB_ICI'
+};
+```
+
+### ▶️ Lancer le front
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Puis ouvrir dans ton navigateur :  
+[http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🔸 Back-End (.NET + MySQL)
 
-```bash
-ng generate component component-name
+### 🛠️ 1. Créer la base de données MySQL
+
+Créer une base `nehmflix` et y importer les tables suivantes (SQL à adapter selon besoin) :
+
+- Table `users`
+- Table `media`
+- Table `users_media`
+- Enum `media_type` : (`film`, `serie`)
+- Enum `liste_type` : (`regarde`, `a_regarder`)
+
+> Tu peux créer le tout avec un fichier `nehmflix.sql` (non fourni ici).
+
+### 🗂️ 2. Configuration de la chaîne de connexion
+
+Dans `NehmFlix.API/appsettings.json`, mets :
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "server=localhost;port=3306;database=nehmflix;user=TON_UTILISATEUR;password=TON_MDP"
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 🚀 3. Lancer l’API
 
 ```bash
-ng generate --help
+cd NehmFlix.API
+dotnet run
 ```
 
-## Building
+L’API s’exécute ensuite sur :  
+[http://localhost:5000](http://localhost:5000) ou [https://localhost:5001](https://localhost:5001)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🧩 Fonctionnalités
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- ✅ Inscription / Connexion utilisateur avec mot de passe hashé
+- 🔍 Recherche de films et séries avec TMDb
+- ➕ Ajout d’un film ou d’une série dans la watchlist
+- ❌ Suppression d’un média de la watchlist
+- 📄 Détails du média : titre, note, résumé, année de sortie, etc.
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📦 Technologies utilisées
 
-```bash
-ng test
-```
+| Outil / Lib           | Utilisation                    |
+|------------------------|--------------------------------|
+| Angular 19             | Front-end                      |
+| .NET 8 (C#)            | API REST                       |
+| MySQL                  | Base de données                |
+| Bootstrap              | UI / Responsive design         |
+| TMDb API               | Recherche de médias            |
+| BCrypt.Net             | Sécurité (hash des mots de passe) |
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 📄 Licence
 
-```bash
-ng e2e
-```
+Projet réalisé dans un cadre académique.  
+Les données sont issues de [The Movie Database (TMDb)](https://www.themoviedb.org/documentation/api).
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 👨‍💻 Développé par
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Nehemie** 
