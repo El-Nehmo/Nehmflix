@@ -25,7 +25,9 @@ public class AuthController : ControllerBase
 
     /*
      Inscrit un nouvel utilisateur avec les données reçues en JSON (nom, email, mot de passe).
-     Si tout se passe bien, renvoie un message de succès.
+     On appelle la méthode Register du UserService, qui peut renvoyer une exception si les données
+     ne sont pas valides.
+     On gère les erreurs spécifiques et les erreurs serveur classiques.
     */
     [HttpPost("register")]
     public IActionResult Register([FromBody] User user)
@@ -35,9 +37,15 @@ public class AuthController : ControllerBase
             _userService.Register(user);
             return Ok(new { message = "Utilisateur inscrit avec succès." });
         }
-        catch (Exception ex)
+        catch (ArgumentException ex)
         {
-            return BadRequest(new { message = $"Erreur : {ex.Message}" });
+            // Mauvaise saisie ou utilisateur déjà existant
+            return BadRequest(new { message = ex.Message });
+        }
+        catch (Exception)
+        {
+            // Problème plus sérieux (ex : base de données inaccessible)
+            return StatusCode(500, new { message = "Une erreur est survenue côté serveur." });
         }
     }
 
@@ -57,3 +65,4 @@ public class AuthController : ControllerBase
         return Unauthorized(new { message = "Identifiants invalides." });
     }
 }
+
